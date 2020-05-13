@@ -73,7 +73,7 @@ ui <- fluidPage(
                                              a("@energySoton", href="https://twitter.com/energysoton"), " and ",
                                              a("@UoSEngineering", href="https://twitter.com/UoSEngineering"), ".",
                                              "Based on an idea by",
-                                             a("@draccoops", href="https://twitter.com/dracoops"), 
+                                             a("@draccoops", href="https://twitter.com/draccoops"), 
                                              " and made possible by ",
                                              a("@juliasilge", href="https://twitter.com/juliasilge"), 
                                              " and ",
@@ -125,15 +125,15 @@ ui <- fluidPage(
         ),
         
         sidebarPanel(
-            ## sidebar ----
+            ## Sidebar ----
             fluidRow(
                 "Input:",
                 textAreaInput("speech", label = "", rows = 10)
             ),
             fluidRow(
                 p("Type/paste whatever text you want into the box above. Multiple lines (like a poem) work best."),
-                h5("Nothing visible?"),
-                p("Paste this into the box:"),
+                p(tags$b("Nothing visible?"), "Paste this into the box:"
+                    ),
                 code("The quick brown fox jumped over the lazy dog"),
                 br(),
                 code("It was a wonderful wonderful day"),
@@ -146,7 +146,7 @@ ui <- fluidPage(
     h6(align = "center", "The Sentimentor: built by ",
          a("@dataknut", href="https://twitter.com/dataknut"),
          " based on an idea by",
-         a("@draccoops", href="https://twitter.com/dracoops")
+         a("@draccoops", href="https://twitter.com/draccoops")
          )
 )
 
@@ -201,7 +201,7 @@ server <- function(input, output) {
           theme(legend.position = "bottom") +
             scale_x_reverse() +
           coord_flip() + 
-          labs(x = "Line/sentence number",
+          labs(x = "Line number",
                y = "Sentiment frequency (number of words by sentiment per line)",
                caption = paste0(myParams$plotCap,
                                 "\nDetected ", nTotalLines, " lines and ", nTotalWords, " words",
