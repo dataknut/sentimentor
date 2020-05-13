@@ -1,0 +1,10 @@
+name: Sentimentor
+title:
+username:
+account: dataknut
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2293320
+bundleId: 3142771
+url: https://dataknut.shinyapps.io/Sentimentor/
+when: 1589385047.78943
