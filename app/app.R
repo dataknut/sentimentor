@@ -40,7 +40,8 @@ ui <- fluidPage(
                                                  "sentiment to them and plots sentiment frequency per line."),
                                            p("For extra fun try ",
                                            a("this text", 
-                                             href="https://www.gov.uk/government/speeches/pm-address-to-the-nation-on-coronavirus-10-may-2020"),
+                                             href="https://www.gov.uk/government/speeches/pm-address-to-the-nation-on-coronavirus-10-may-2020",
+                                             target = "text"),
                                            "..."
                                            )
                                   ),
