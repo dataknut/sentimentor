@@ -14,8 +14,7 @@ Twitter is our viral medium of choice. <a href="https://twitter.com/hashtag/sent
 
 ### Check the data sources?
 
-'Bing' sentiment data is sourced from [Bing Liu and collaborators](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html). 
-Stop words are derived from the #rstats [tidytext package](https://github.com/juliasilge/tidytext), [stop_words](https://rdrr.io/cran/tidytext/man/stop_words.html) data.
+Both the [Bing Liu and collaborators](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html) sentiment data and the [stop words](https://rdrr.io/cran/tidytext/man/stop_words.html) data are sourced from the #rstats [tidytext package](https://github.com/juliasilge/tidytext). 
 
 ### Give feedback?
 
