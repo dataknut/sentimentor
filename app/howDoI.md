@@ -23,4 +23,4 @@ Raise an issue on the code [repo](https://github.com/dataknut/Sentimentor/issues
 
 ### Get the code?
 
-The code is [open source](https://github.com/dataknut/Sentimentor/) under an [MIT license](https://github.com/dataknut/Sentimentor/blob/master/LICENSE")
+The code is [open source](https://github.com/dataknut/Sentimentor/) under an [MIT license](https://github.com/dataknut/Sentimentor/blob/master/LICENSE).
