@@ -48,79 +48,11 @@ ui <- fluidPage(
                                   tabPanel("What...?",
                                            ## >> What? tab ----
                                            p(),
-                                           p("The Sentimentor:"),
-                                           tags$ol(
-                                               tags$li("automatically filters out the 'stopping' words (the/and/if etc); "),
-                                               tags$li("assigns a positive/negative sentiment to the words that, according to the ",
-                                             a("Bing lexicon", 
-                                               href = "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html"),
-                                             ", have positive or negative sentiment;"),
-                                             tags$li("counts how many of each sentiment you have per line and "),
-                                             tags$li("plots the result by line number.")
-                                             ),
-                                           p("You may find you have multiple negative and/or positive words (or no sentimented words at all) per line."),
-                                           p("If you don't see the plot check you have used some non-stopping words."),
-                                         p("For extra fun try ",
-                                           a("this text", 
-                                             href="https://www.gov.uk/government/speeches/pm-address-to-the-nation-on-coronavirus-10-may-2020"),
-                                           "..."
-                                           )
+                                           includeMarkdown("what.md")
                                   ),
                                   tabPanel("How do I...", 
                                            # >> How to tab ----
-                                           h3("Blame someone?"),
-                                           p("The Sentimentor is brought to you by ",
-                                             a("@dataknut", href="https://twitter.com/dataknut"), ",",
-                                             a("@energySoton", href="https://twitter.com/energysoton"), " and ",
-                                             a("@UoSEngineering", href="https://twitter.com/UoSEngineering"), ".",
-                                             "Based on an idea by",
-                                             a("@draccoops", href="https://twitter.com/draccoops"), 
-                                             " and made possible by ",
-                                             a("@juliasilge", href="https://twitter.com/juliasilge"), 
-                                             " and ",
-                                             a("@drob", href="https://twitter.com/drob"), "'s #rstats ",
-                                             a("#tidytext", href="https://juliasilge.github.io/tidytext/"),
-                                             "package."
-                                           ),
-                                           h3("Check the results are 'right'?"),
-                                           p("Tricky one. We think the calculations are 'right' given the inputs (your typing and the sentiment data).",
-                                             ". ",
-                                             "If you really really think they're wrong, please raise an issue on the code ",
-                                             a("repo.", 
-                                               href="https://github.com/dataknut/Sentimentor/issues?q=is%3Aissue")
-                                           ),
-                                           h3("Spread the word?"),
-                                           p( 
-                                               #https://community.rstudio.com/t/include-a-button-in-a-shiny-app-to-tweet-the-url-to-the-app/8113/2
-                                               # Create url with the 'twitter-share-button' class
-                                               tags$a(href=myParams$appUrl, "Twitter", class="twitter-share-button"),
-                                               # Copy the script from https://dev.twitter.com/web/javascript/loading into your app
-                                               # You can source it from the URL below. It must go after you've created your link
-                                               includeScript("http://platform.twitter.com/widgets.js"),
-                                               " is our viral medium of choice."
-                                           ),
-                                           h3("Check the data sources?"),
-                                           p("'Bing' sentiment data is sourced from ",
-                                             a("Bing Liu and collaborators", 
-                                               href = "https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html"),
-                                             "."
-                                           ),
-                                           p("Stop words are derived from the R package ",
-                                             a("tidytext package", 
-                                               href = "https://github.com/juliasilge/tidytext"), "'s",
-                                             a(" stop_words", 
-                                               href = "https://rdrr.io/cran/tidytext/man/stop_words.html"), 
-                                             "data."),
-                                           h3("Give feedback?"),
-                                           p("Raise an issue on the code ",
-                                             a("repo", 
-                                               href="https://github.com/dataknut/Sentimentor/issues?q=is%3Aissue"), "."
-                                           ),
-                                           h3("Get the code?"),
-                                           p("The code is open source under an ", 
-                                             a("MIT license",
-                                               href="https://github.com/dataknut/Sentimentor/blob/master/LICENSE") 
-                                           )
+                                           includeMarkdown("howDoI.md")
                                   )
                       )
         ),
